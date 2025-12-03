@@ -1,9 +1,11 @@
+import './Login.css';
 const Hello = ({user, onLogout}) => {
   
   return (
     <div id="hello-page">
-        <p>{user}님 안녕하세요</p>
-        <button onClick={onLogout}>로그아웃</button>
+        <h2>Hello!{user}</h2>
+        <h3>What is your main focus for today?</h3>
+        <button onClick={onLogout}>Logout</button>
     </div>
   )
 }

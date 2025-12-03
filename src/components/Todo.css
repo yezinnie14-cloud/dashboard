@@ -1,0 +1,33 @@
+#todopage{
+    /* position: relative; */
+}
+.todo-input{
+    width: 90%;
+    max-width: 250px;
+    padding: 6px 8px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0,0,0,0.4);
+    outline: none;
+    font-size: 1rem;
+}
+.today-toggle {
+  width: 260px;
+  padding: 6px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  text-align: left;
+  font-weight: 500;
+}
+.todo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4px;
+    padding: 16px 20px;
+    border: 1px solid rgba(0,0,0,0.4);
+    background: rgba(255, 255, 255, 0.35);
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+
+}

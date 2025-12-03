@@ -1,6 +1,7 @@
 import {useEffect, useState } from "react"
 import TodoForm from "./TodoForm"
 import TodoList from "./TodoList"
+import './Todo.css';
 
 const Todos = () => {
     /**
@@ -15,6 +16,8 @@ const Todos = () => {
         //값이 있으면 변환해서 쓰고, 없으면 빈배열을 기본값으로 쓰고
         return loaded ? JSON.parse(loaded) : [];
     });
+
+    const [isOpen, setIsOpen] = useState(false);
     // useEffect,[]);
     useEffect(()=>{
         //todos를  localstorage에 저장
@@ -44,6 +47,13 @@ const Todos = () => {
     }
     return (
         <div id="todo-page">
+            <button 
+            className="today-toggle"
+            onClick={()=> setIsOpen((prev)=> !prev)}>
+                Today {isOpen ? "▼" : "▲"}
+            </button>
+         {isOpen && (
+            <div className="todo-card">
             <TodoForm onSave={handleTodosSave} />
             {/* <p>ENTER키를 누른 후 입력값:{todos}</p> */}
             <TodoList 
@@ -51,6 +61,8 @@ const Todos = () => {
             onDel={handleTodosDel} 
             onToggle={handleToggle}
             />
+            </div>
+         )}
         </div>
     )
 }

@@ -1,0 +1,14 @@
+.focus-btn, .timer-btn {
+    background: transparent;
+    border: 1px solid rgba(2, 2, 2, 0.8);
+    border-radius: 25px;
+    padding: 6px 18px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #2a2a2a;
+}
+.focus-btn:hover , .timer-btn {
+  background: rgba(2,2,2,0.5);
+  color: #fff;
+}
+

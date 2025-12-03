@@ -1,52 +1,52 @@
 [
-  {
+{
     "id": 1,
-    "text": "내일을 변화시키는 힘은 오늘을 살아가는 작은 용기에서 나온다.",
-    "author": "알베르 카뮈"
+    "text": "The power to change tomorrow begins with the courage to live today.",
+    "author": "Albert Camus"
   },
   {
     "id": 2,
-    "text": "가장 어두운 순간이 오히려 가장 밝은 빛을 준비한다.",
-    "author": "파울로 코엘료"
+    "text": "The darkest moments often prepare the brightest light.",
+    "author": "Paulo Coelho"
   },
   {
     "id": 3,
-    "text": "마음이 움직이면 길은 언제나 다시 열린다.",
-    "author": "헤르만 헤세"
+    "text": "When the heart moves, the path always opens.",
+    "author": "Hermann Hesse"
   },
   {
     "id": 4,
-    "text": "나 자신을 사랑하는 순간부터 삶은 다시 시작된다.",
-    "author": "버지니아 울프"
+    "text": "Life begins anew the moment you decide to love yourself.",
+    "author": "Virginia Woolf"
   },
   {
     "id": 5,
-    "text": "희망은 스스로 만들어내는 가장 강한 힘이다.",
-    "author": "헬렌 켈러"
+    "text": "Hope is the strongest force we can create within ourselves.",
+    "author": "Helen Keller"
   },
   {
     "id": 6,
-    "text": "작은 날갯짓도 결국 큰 바람을 만든다.",
-    "author": "하루키 무라카미"
+    "text": "Even the smallest flutter of wings can create a great wind.",
+    "author": "Haruki Murakami"
   },
   {
     "id": 7,
-    "text": "오늘 넘어졌다면 내일은 더 단단하게 일어날 준비가 된 것이다.",
-    "author": "프리드리히 니체"
+    "text": "If you fall today, it only means you’re ready to rise stronger tomorrow.",
+    "author": "Friedrich Nietzsche"
   },
   {
     "id": 8,
-    "text": "행복은 거창한 것이 아니야. 지금 이 순간을 사랑하는 마음이야.",
-    "author": "법정 스님"
+    "text": "Happiness isn’t grand; it’s the simple act of loving this very moment.",
+    "author": "Beopjeong Sunim"
   },
   {
     "id": 9,
-    "text": "흔들리는 순간조차도 나를 성장시키는 씨앗이 된다.",
-    "author": "김수영(시인)"
+    "text": "Even moments of trembling become seeds of growth.",
+    "author": "Kim Soo-young"
   },
   {
     "id": 10,
-    "text": "삶은 계속된다. 그러니 다시 아름다워질 수 있다.",
-    "author": "수전 손택"
+    "text": "Life goes on, and therefore, it can become beautiful again.",
+    "author": "Susan Sontag"
   }
 ]

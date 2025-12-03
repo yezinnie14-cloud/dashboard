@@ -1,4 +1,5 @@
 import { useState } from "react"
+import './Login.css';
 
 const Login = ({onLogin}) => {
     const [user,setUser] = useState('');
@@ -8,14 +9,17 @@ const Login = ({onLogin}) => {
     }
   return (
     <form id="login-page" onSubmit={handleSubmit}>
-        <h2>이름을 입력하세요</h2>
+        <h2>Hello! What's your name?</h2>
+        <div className="input-row">
         <input 
         
           type="text"
           value={user}
           onChange={(e)=>{setUser(e.target.value)}}
+          className="line-input"
         />
-        <button type="submit">입장하기</button>
+        <button type="submit" className="continue-btn">Continue</button>
+        </div>
     </form>
   )
 }

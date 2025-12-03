@@ -4,9 +4,15 @@ import Login from "./components/Login"
 import Weather from "./components/Weather"
 import Todos from "./components/Todos"
 import Quotes from "./components/Quotes"
+import "./App.css";
+import Timer from "./components/Timer"
+import Clock from "./components/Clock"
+import Focus from "./components/Focus"
 
 const App = () => {
   const [userName, setUserName] = useState(null);
+  const [mode, setMode] = useState("base");
+
   const handleLogin = (data) => {
     localStorage.setItem("USER_NAME", data);
     setUserName(data);
@@ -30,16 +36,54 @@ const App = () => {
 
   return (
     <div id="app">
-      {
-        userName ? <Hello user={userName} onLogout={handleLogout} /> : <Login onLogin={handleLogin} />
-      }
-      <Quotes/>
-      <Todos/>
-      <Weather />
+      <div className="center-block">
+        <Weather />
+        {mode !== "timer" && <Clock />}
+        {mode === "base" && (
+          <>
+            {
+              userName ? 
+             ( <Hello user={userName} onLogout={handleLogout} /> ) : (<Login onLogin={handleLogin} />)
+            }
+            <Quotes />
+          </>
+        )}
 
+        <div className="today-wrapper">
+          <Todos />
+          {mode === "focus" && (
+            <>
+              <Focus />
+              <Quotes />
+            </>
+          )}
+          </div>
+          {mode === "timer" && (
+            <>
+              <Timer />
+              <Quotes />
+            </>
+          )}
+        </div>
+        {/* <Focus /> */}
+      <div className="left-btn">
+        <button className="focus-btn"
+         onClick={()=> setMode((prev)=> (prev === "focus" ? "base" : "focus"))}
+        >Focus</button>
+        <button className="timer-btn"
+          onClick={() => setMode((prev) =>(prev === "timer" ? "base" : "timer"))}>
+          Timer
+        </button>
+      </div>
+      {mode === "base" && (
+         <div className="today-wrapper">
+          <Todos/>
+          </div>
+      )}
+        
+      </div>
 
-    </div>
-  )
-}
+  );
+};
 
 export default App

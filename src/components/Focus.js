@@ -1,11 +1,15 @@
+import Clock from './Clock';
 import './Focus.css';
-const Focus = () => {
+const Focus = ({todo, onStop}) => {
   return (
-    <div >
-        {/* <button className="focus-btn">Focus</button>
-        <button className="timer-btn">Timer</button> */}
-        </div>
+    <div className='focus-overlay'>
+      <div className='focus-inner'>
+        <Clock/>
+       <button className='stop-btn'>Stop</button>
+      </div>
+    </div>
   )
+
 }
 
 export default Focus

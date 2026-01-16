@@ -34,55 +34,123 @@ const App = () => {
   }, []);
 
 
-  return (
+//   return (
+//     <div id="app">
+//       <div className="center-block">
+//         <Weather />
+//         {mode !== "timer" && <Clock />}
+//         {mode === "base" && (
+//           <>
+//             {
+//               userName ? 
+//              ( <Hello user={userName} onLogout={handleLogout} /> ) : (<Login onLogin={handleLogin} />)
+//             }
+//             <Quotes />
+//           </>
+//         )}
+
+//         <div className="today-wrapper">
+//           <Todos />
+//           {mode === "focus" && (
+//             <>
+//               <Focus />
+//               <Quotes />
+//             </>
+//           )}
+//           </div>
+//           {mode === "timer" && (
+//             <>
+//               <Timer />
+//               <Quotes />
+//             </>
+//           )}
+//         </div>
+//         {/* <Focus /> */}
+//       <div className="left-btn">
+//         <button className="focus-btn"
+//          onClick={()=> setMode((prev)=> (prev === "focus" ? "base" : "focus"))}
+//         >Focus</button>
+//         <button className="timer-btn"
+//           onClick={() => setMode((prev) =>(prev === "timer" ? "base" : "timer"))}>
+//           Timer
+//         </button>
+//       </div>
+//       {mode === "base" && (
+//          <div className="today-wrapper">
+//           <Todos/>
+//           </div>
+//       )}
+        
+//       </div>
+
+//   );
+// };
+ return (
     <div id="app">
+
+      {/* TOP AREA */}
+      <Weather />
+
+      {/* timer 모드에서는 Clock 숨김 */}
+      {mode !== "timer" && <Clock />}
+
+      {/* CENTER BLOCK */}
       <div className="center-block">
-        <Weather />
-        {mode !== "timer" && <Clock />}
+
         {mode === "base" && (
           <>
-            {
-              userName ? 
-             ( <Hello user={userName} onLogout={handleLogout} /> ) : (<Login onLogin={handleLogin} />)
-            }
+            {userName ? (
+              <Hello user={userName} onLogout={handleLogout} />
+            ) : (
+              <Login onLogin={handleLogin} />
+            )}
             <Quotes />
           </>
         )}
 
-        <div className="today-wrapper">
-          <Todos />
-          {mode === "focus" && (
-            <>
-              <Focus />
-              <Quotes />
-            </>
-          )}
-          </div>
-          {mode === "timer" && (
-            <>
-              <Timer />
-              <Quotes />
-            </>
-          )}
-        </div>
-        {/* <Focus /> */}
+        {mode === "focus" && (
+          <>
+            <Focus />
+            <Quotes />
+          </>
+        )}
+
+        {mode === "timer" && (
+          <>
+            <Timer />
+            <Quotes />
+          </>
+        )}
+      </div>
+
+      {/* LEFT BUTTONS */}
       <div className="left-btn">
-        <button className="focus-btn"
-         onClick={()=> setMode((prev)=> (prev === "focus" ? "base" : "focus"))}
-        >Focus</button>
-        <button className="timer-btn"
-          onClick={() => setMode((prev) =>(prev === "timer" ? "base" : "timer"))}>
+        <button
+          className="focus-btn"
+          onClick={() =>
+            setMode((prev) => (prev === "focus" ? "base" : "focus"))
+          }
+        >
+          Focus
+        </button>
+
+        <button
+          className="timer-btn"
+          onClick={() =>
+            setMode((prev) => (prev === "timer" ? "base" : "timer"))
+          }
+        >
           Timer
         </button>
       </div>
-      {mode === "base" && (
-         <div className="today-wrapper">
-          <Todos/>
-          </div>
-      )}
-        
-      </div>
 
+      {/* TODAY BOX (BASE MODE ONLY) */}
+      {mode === "base" && (
+        <div className="today-wrapper">
+          <Todos />
+        </div>
+      )}
+    </div>
   );
 };
 
